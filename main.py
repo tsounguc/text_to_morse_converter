@@ -1,16 +1,52 @@
-# This is a sample Python script.
+morse_dict = {
+    'a': '·−',
+    'b': '−···',
+    'c': '−·−·',
+    'd': '−··',
+    'e': '·',
+    'f': '··−·',
+    'g': '−−·',
+    'h': '····',
+    'i': '··',
+    'j': '·−−−',
+    'k': '−·−',
+    'l': '·−··',
+    'm': '−−',
+    'n': '−·',
+    'o': '−−−',
+    'p': '·−−·',
+    'q': '−−·−',
+    'r': '·−·',
+    's': '···',
+    't': '−',
+    'u': '··−',
+    'v': '···−',
+    'w': '·−−',
+    'x': '−··−',
+    'y': '−·−−',
+    'z': '−−··',
+    '1': '·−−−−',
+    '2': '··−−−',
+    '3': '···−−',
+    '4': '····−',
+    '5': '·····',
+    '6': '−····',
+    '7': '−−···',
+    '8': '−−−··',
+    '9': '−−−−·',
+    '0': '−−−−−',
+    ' ': '  '
+}
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+user_text = input('Please input a message: ').lower()
+
+encrypted_message = ""
+
+for c in user_text:
+    if c in morse_dict:
+        encrypted_message += morse_dict[c] + " "
+    else:
+        encrypted_message += c
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(encrypted_message)
